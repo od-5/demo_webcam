@@ -111,10 +111,10 @@
   </div>
   <div id="enter-popup" class="enter-popup">
     <div class="enter-popup-title">Войдите в ваш аккаунт</div>
-    <form action="">
+    <form action="{% url 'landing:login' %}">
       <fieldset>
-        <input name="" type="text" class="input input-login" placeholder="Введите ваш логин">
-        <input name="" type="text" class="input input-email" placeholder="Введите ваш email">
+        <input name="username" type="text" class="input input-login" placeholder="Введите ваш логин">
+        <input name="password" type="password" class="input input-email" placeholder="Введите ваш пароль">
         <button class="submit">Войти</button>
         <div class="enter-popup-text">У вас еще нет аккуанта? <br><a href="">Зарегистрироваться</a></div>
       </fieldset>

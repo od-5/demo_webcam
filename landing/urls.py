@@ -16,4 +16,5 @@ urlpatterns = patterns(
     url(r'^menu/$', TemplateView.as_view(template_name='landing/menu.html'), name='menu'),
     url(r'^robots\.txt', 'get_robots_txt', name='robots'),
     url(r'^sitemap\.xml', 'get_sitemap_xml', name='sitemap'),
+    url(r'^login/$', 'landing_sign', name='login'),
 )
