@@ -1,0 +1,8 @@
+<ul class="{{ class|default:'' }}">
+  <li><a href="{% url 'cabinet:administrator:dashboard' %}">Рабочий стол</a></li>
+  <li><a href="{% url 'cabinet:administrator:quickstats' %}">Статистика</a></li>
+  <li><a href="{% url 'cabinet:administrator:customer_list' %}">Клиенты</a></li>
+  <li><a href="{% url 'cabinet:administrator:webmaster_list' %}">Вебмастера</a></li>
+  <li><a href="{% url 'cabinet:administrator:event_list' %}">Сайт</a></li>
+  <li><a href="{% url 'cabinet:administrator:systemconfig' %}">Настройки</a></li>
+</ul>

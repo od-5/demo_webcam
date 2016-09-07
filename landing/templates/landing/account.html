@@ -1,0 +1,101 @@
+﻿{% extends 'landing/base_site.html' %}
+{% block content %}
+		<section class="main-section">
+			<div class="holder">
+				<div class="title-block">
+					<a href="{% url 'landing:index' %}" class="title-back">Вернутся к трансляции главной сцены</a>
+					<h2>Мой аккаунт</h2>
+				</div>
+				<div class="account">
+					<div class="account-form">
+						<form action="">
+							<fieldset>
+								<div class="account-form-item">
+									<label class="label">Логин:</label>
+									<input name="" type="text" class="input" value="mr.Xman">
+								</div>
+								<div class="account-form-item">
+									<label class="label">Email:</label>
+									<input name="" type="text" class="input" value="213xxx@gmail.com">
+								</div>
+								<div class="account-form-item">
+									<label class="label">Пароль:</label>
+									<input name="" type="text" class="input" value="**********************">
+								</div>
+								<div class="account-form-item">
+									<button class="submit">Сохранить</button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<div class="account-discount">
+						<h2>Купоны на скидку</h2>
+						<div class="discount-item pink">
+							<div class="discount-code">BSZ8931004</div>
+							<div class="discount-amount">-10%</div>
+							<div class="discount-text">Новый</div>
+						</div>
+						<div class="discount-item">
+							<div class="discount-code">XZS8931003</div>
+							<div class="discount-amount">-10%</div>
+							<div class="discount-text">Использован 10.07.2016</div>
+						</div>
+						<div class="discount-item">
+							<div class="discount-code">XZS8931003</div>
+							<div class="discount-amount">-10%</div>
+							<div class="discount-text">Использован 10.07.2016</div>
+						</div>
+					</div>
+					<div class="account-payment">
+						<h2>Мои оплаты</h2>
+						<div class="account-scroll">
+							<table class="account-table">
+								<tr>
+									<th>№</th>
+									<th>Дата оплаты</th>
+									<th>Сумма</th>
+									<th>Подписка</th>
+									<th>Срок действия</th>
+								</tr>
+								<tr class="active">
+									<td>1.</td>
+									<td>07.08.2016</td>
+									<td>3000 руб.</td>
+									<td>Стандарт</td>
+									<td>10.08.2016</td>
+								</tr>
+								<tr>
+									<td>2.</td>
+									<td>07.08.2016</td>
+									<td>3000 руб.</td>
+									<td>Стандарт</td>
+									<td>10.08.2016</td>
+								</tr>
+								<tr>
+									<td>3.</td>
+									<td>07.08.2016</td>
+									<td>3000 руб.</td>
+									<td>Стандарт</td>
+									<td>10.08.2016</td>
+								</tr>
+								<tr>
+									<td>4.</td>
+									<td>07.08.2016</td>
+									<td>3000 руб.</td>
+									<td>Стандарт</td>
+									<td>10.08.2016</td>
+								</tr>
+								<tr>
+									<td>5.</td>
+									<td>07.08.2016</td>
+									<td>3000 руб.</td>
+									<td>Стандарт</td>
+									<td>10.08.2016</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+{% endblock %}

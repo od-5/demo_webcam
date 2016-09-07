@@ -1,0 +1,127 @@
+﻿{% extends 'landing/base_site.html' %}
+{% load staticfiles %}
+{% block content %}
+		<section class="main-section">
+			<div class="holder">
+				<div class="title-block">
+					<a href="{% url 'landing:index' %}" class="title-back">Вернутся к трансляции главной сцены</a>
+					<h2>Афиша шоу-программ</h2>
+				</div>
+				<div class="affiche">
+					<div class="affiche-block">
+						<div class="affiche-item">
+							<div class="affiche-item-img">
+								<a href=""><img src="{% static 'landing/images/media/affiche/1.jpg' %}" alt=""></a>
+							</div>
+							<div class="affiche-item-text">29.08.2016<br>в 20:00 МСК</div>
+						</div>
+						<div class="affiche-item">
+							<div class="affiche-item-img">
+								<a href=""><img src="{% static 'landing/images/media/affiche/2.jpg' %}" alt=""></a>
+							</div>
+							<div class="affiche-item-text">29.08.2016<br>в 20:00 МСК</div>
+						</div>
+            {% if not user.is_authenticated %}
+						<div class="affiche-item affiche-item-button">
+							<div class="affiche-item-hide">
+								<div class="main-form-title">
+									<span class="main-form-title1">Создайте </span>
+									<span class="main-form-title2">БЕСПЛАТНЫЙ</span>
+									аккаунт и получите
+								</div>
+								<ul class="main-form-list">
+									<li>Неограниченный просмотр главной сцены;</li>
+									<li>Доступ к чату для общения;</li>
+									<li>Доступ к закулисным камерам;</li>
+								</ul>
+								<div class="main-form">
+									<form action="">
+										<fieldset>
+											<input name="" type="text" class="input input-login" placeholder="Введите ваш логин">
+											<input name="" type="text" class="input input-email" placeholder="Введите ваш email">
+											<button class="submit">Создать аккаунт</button>
+											<div class="check-block">
+												<input name="" id="check1" type="checkbox" class="check" checked>
+												<label for="check1" class="check-label">Я соглашаюсь с <a href="">правилами сайта</a></label>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+							</div>
+							<a href="#popup5" class="submit black-fancy">Создать аккаунт</a>
+						</div>
+            {% else %}
+              <div class="affiche-item">
+							<div class="affiche-item-img">
+								<a href=""><img src="{% static 'landing/images/media/affiche/3.jpg' %}" alt=""></a>
+							</div>
+							<div class="affiche-item-text">29.08.2016<br>в 20:00 МСК</div>
+						</div>
+            {% endif %}
+					</div>
+					<div class="affiche-block">
+						<div class="affiche-item">
+							<div class="affiche-item-img">
+								<a href=""><img src="{% static 'landing/images/media/affiche/1.jpg' %}" alt=""></a>
+							</div>
+							<div class="affiche-item-text">29.08.2016<br>в 20:00 МСК</div>
+						</div>
+						<div class="affiche-item">
+							<div class="affiche-item-img">
+								<a href=""><img src="{% static 'landing/images/media/affiche/2.jpg' %}" alt=""></a>
+							</div>
+							<div class="affiche-item-text">29.08.2016<br>в 20:00 МСК</div>
+						</div>
+						<div class="affiche-item">
+							<div class="affiche-item-img">
+								<a href=""><img src="{% static 'landing/images/media/affiche/3.jpg' %}" alt=""></a>
+							</div>
+							<div class="affiche-item-text">29.08.2016<br>в 20:00 МСК</div>
+						</div>
+						<div class="affiche-item">
+							<div class="affiche-item-img">
+								<a href=""><img src="{% static 'landing/images/media/affiche/1.jpg' %}" alt=""></a>
+							</div>
+							<div class="affiche-item-text">29.08.2016<br>в 20:00 МСК</div>
+						</div>
+						<div class="affiche-item">
+							<div class="affiche-item-img">
+								<a href=""><img src="{% static 'landing/images/media/affiche/2.jpg' %}" alt=""></a>
+							</div>
+							<div class="affiche-item-text">29.08.2016<br>в 20:00 МСК</div>
+						</div>
+						<div class="affiche-item">
+							<div class="affiche-item-img">
+								<a href=""><img src="{% static 'landing/images/media/affiche/3.jpg' %}" alt=""></a>
+							</div>
+							<div class="affiche-item-text">29.08.2016<br>в 20:00 МСК</div>
+						</div>
+					</div>	
+					<h2>Прошедшие шоу</h2>
+					<div class="affiche-block">
+						<div class="affiche-item">
+							<div class="affiche-item-img">
+								<a href=""><img src="{% static 'landing/images/media/affiche/1.jpg' %}" alt=""></a>
+							</div>
+							<div class="affiche-item-text">29.08.2016<br>в 20:00 МСК</div>
+						</div>
+						<div class="affiche-item">
+							<div class="affiche-item-img">
+								<a href=""><img src="{% static 'landing/images/media/affiche/2.jpg' %}" alt=""></a>
+							</div>
+							<div class="affiche-item-text">29.08.2016<br>в 20:00 МСК</div>
+						</div>
+						<div class="affiche-item">
+							<div class="affiche-item-img">
+								<a href=""><img src="{% static 'landing/images/media/affiche/3.jpg' %}" alt=""></a>
+							</div>
+							<div class="affiche-item-text">29.08.2016<br>в 20:00 МСК</div>
+						</div>
+					</div>
+				</div>
+				<div class="button-holder affiche-button">
+					<a href="" class="button">Показать ещё</a>
+				</div>
+			</div>
+		</section>
+{% endblock %}

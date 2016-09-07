@@ -1,0 +1,21 @@
+﻿{% extends 'landing/base_site.html' %}
+{% load staticfiles %}
+{% block content %}
+		<section class="main-section">
+			<div class="holder">
+				<div class="title-block">
+					<a href="" class="title-back">Вернутся к трансляции главной сцены</a>
+					<h2>Интерьеры клуба</h2>
+				</div>	
+			</div>
+			<div class="interior-slider">
+				<div class="owl-carousel">
+          {% for slide in '11111' %}
+					<div class="interior-slide">
+						<img src="{% static 'landing/images/media/i1.jpg' %}" alt="">
+					</div>
+          {% endfor %}
+				</div>
+			</div>
+		</section>
+{% endblock %}

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  {% load staticfiles %}
+  <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="keywords" content="{% block meta_keys %}{% endblock %}">
+  <meta name="description" content="{% block meta_desc %}{% endblock %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}OnlineStipClub.pro - смотрите жизнь за кулисами{% endblock %}</title>
+  <link media="all" rel="stylesheet" type="text/css" href="{% static 'landing/css/all.css' %}" />
+  <link media="all" rel="stylesheet" type="text/css" href="{% static 'landing/css/jquery.fancybox.css' %}" />
+  <link media="all" rel="stylesheet" type="text/css" href="{% static 'landing/css/jquery.bxslider.css' %}" />
+  <link media="all" rel="stylesheet" type="text/css" href="{% static 'landing/css/owl.carousel.css' %}" />
+  <link media="all" rel="stylesheet" type="text/css" href="{% static 'landing/css/jquery-ui.css' %}" />
+  <link media="all" rel="stylesheet" type="text/css" href="{% static 'landing/css/jquery.multiselect.css' %}" />
+  <script src="{% static 'landing/js/jquery-1.9.1.min.js' %}"></script>
+  <script src="{% static 'landing/js/jquery-ui.min.js' %}"></script>
+  <script src="{% static 'landing/js/jquery.multiselect.min.js' %}"></script>
+  <script src="{% static 'landing/js/jquery.uniform.min.js' %}"></script>
+  <script src="{% static 'landing/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'landing/js/jquery.bxslider.min.js' %}"></script>
+  <script src="{% static 'landing/js/jquery.fancybox.js' %}"></script>
+  <script src="{% static 'landing/js/jquery.validate.js' %}"></script>
+  <script src="{% static 'landing/js/jquery.scrollTo.js' %}"></script>
+  <script src="{% static 'landing/js/tabs.js' %}"></script>
+  <script src="{% static 'landing/js/all.js' %}"></script>
+  <!--[if lt IE 9]><script type="text/javascript" src="{% static 'landing/js/html5.js' %}"></script><![endif]-->
+  <!--[if lt IE 9]><script type="text/javascript" src="{% static 'landing/js/placeholder.js' %}"></script><![endif]-->
+</head>
+<body>
+  <div id="wrapper">
+    <header id="header">
+      <div class="header-top">
+        <div class="holder">
+          <div class="logo">
+            <img src="{% static 'landing/images/logo.png' %}" alt="" class="logo-img">
+            <span class="logo-text">OnlineStipClub<span class="pink">.pro</span></span>
+            <span class="logo-text-min">смотрите жизнь <span class="pink">за кулисами</span></span>
+          </div>
+          <div class="header-links">
+            <a href="{% url 'landing:afisha' %}" class="header-link">Афиша</a>
+            <div class="header-about">
+              <a href="" class="header-link-about">О клубе</a>
+              <ul class="header-about-hidden">
+                <li><a href="">Наши девушки</a></li>
+                <li><a href="{% url 'landing:interior' %}">Интерьеры клуба</a></li>
+                <li><a href="{% url 'landing:menu' %}">Меню</a></li>
+              </ul>
+            </div>
+            {% if user.is_authenticated %}
+            <a href="{% url 'landing:account' %}" class="header-enter header-person">Евгений</a>
+            {% else %}
+            <a href="#enter-popup" class="header-enter blue-fancy">Вход</a>
+            {% endif %}
+          </div>
+          <a href="" class="nav-icon"><img src="{% static 'landing/images/nav-icon.png' %}" alt=""></a>
+        </div>
+      </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+  </div>
+  <footer id="footer">
+    <div class="holder">
+      <div class="footer-webs mob-webs">
+        <a href="" class="web1"></a>
+        <a href="" class="web2"></a>
+        <a href="" class="web3"></a>
+      </div>
+      <div class="footer-links">
+        <a href="">Тарифы</a>
+        <a href="">Условия</a>
+        <a href="">Политика конфиденциальности</a>
+      </div>
+      <div class="footer-webs mob-hide">
+        <a href="" class="web1"></a>
+        <a href="" class="web2"></a>
+        <a href="" class="web3"></a>
+      </div>
+      <div class="footer-copy">
+        <div class="footer-copy-num">18+</div>
+        <div class="footer-copy-text">Информация на сайте <span class="pink">www.OnlineStipClub.pro</span> предназначена для лиц старше 18 лет</div>
+      </div>
+    </div>
+  </footer>
+  <div id="popup5" class="black-popup">
+    <div class="main-form-title">
+      <span class="main-form-title1">Создайте </span>
+      <span class="main-form-title2">БЕСПЛАТНЫЙ</span>
+      аккаунт и получите
+    </div>
+    <ul class="main-form-list">
+      <li>Неограниченный просмотр главной сцены;</li>
+      <li>Доступ к чату для общения;</li>
+      <li>Доступ к закулисным камерам;</li>
+    </ul>
+    <div class="main-form">
+      <form action="">
+        <fieldset>
+          <input name="" type="text" class="input input-login" placeholder="Введите ваш логин">
+          <input name="" type="text" class="input input-email" placeholder="Введите ваш email">
+          <button class="submit">Создать аккаунт</button>
+          <div class="check-block">
+            <input name="" id="check1" type="checkbox" class="check" checked>
+            <label for="check1" class="check-label">Я соглашаюсь с <a href="">правилами сайта</a></label>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <div id="enter-popup" class="enter-popup">
+    <div class="enter-popup-title">Войдите в ваш аккаунт</div>
+    <form action="">
+      <fieldset>
+        <input name="" type="text" class="input input-login" placeholder="Введите ваш логин">
+        <input name="" type="text" class="input input-email" placeholder="Введите ваш email">
+        <button class="submit">Войти</button>
+        <div class="enter-popup-text">У вас еще нет аккуанта? <br><a href="">Зарегистрироваться</a></div>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

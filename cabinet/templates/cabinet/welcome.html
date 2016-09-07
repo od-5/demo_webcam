@@ -1,0 +1,103 @@
+{% extends 'cabinet/cabinet_base.html' %}
+{% block title %}Выберите тип пользователя для входа{% endblock %}
+{% block header_menu %}
+  {% load staticfiles %}
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="col-lg-12">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="{% url 'cabinet:welcome' %}">
+            <img src="{% static 'img/logotype.png' %}" alt="onlinestripclub.pro">
+          </a>
+        </div>
+      {% include 'cabinet/__includes/welcome_menu.html' with class="nav navbar-nav navbar-right" %}
+      </div>
+    </div>
+  </nav>
+{% endblock %}
+{% block main %}
+  <div class="row">
+    <div class="col-lg-12">
+      {% if error %}
+        <div class="text-center sign-error">
+          <p class="alert alert-warning">{{ error }}</p>
+        </div>
+      {% endif %}
+      <h1>
+        Вход для {% if usertype == 2 %}вебмастера{% elif usertype == 3 %}сео специалиста{% else %}администратора{% endif %}
+      </h1>
+    </div>
+    <div class="col-lg-12">
+
+      <div class="sign">
+        {% if usertype == 1 %}
+        <table>
+          <tbody>
+            <tr>
+              <td>Логин:&nbsp;&nbsp;</td>
+              <td>admin</td>
+            </tr>
+            <tr>
+              <td>Пароль:&nbsp;&nbsp;</td>
+              <td>admin</td>
+            </tr>
+          </tbody>
+        </table>
+        {% elif usertype == 2 %}
+        <table>
+          <tbody>
+            <tr>
+              <td>Логин:&nbsp;&nbsp;</td>
+              <td>webmaster</td>
+            </tr>
+            <tr>
+              <td>Пароль:&nbsp;&nbsp;</td>
+              <td>webmaster</td>
+            </tr>
+          </tbody>
+        </table>
+        {% elif usertype == 3 %}
+        <table>
+          <tbody>
+            <tr>
+              <td>Логин:&nbsp;&nbsp;</td>
+              <td>testing</td>
+            </tr>
+            <tr>
+              <td>Пароль:&nbsp;&nbsp;</td>
+              <td>testing</td>
+            </tr>
+          </tbody>
+        </table>
+        {% endif %}
+        <form action="" role="form" method="post" class="sign-form">{% csrf_token %}
+          <input type="hidden" name="usertype" value="{{ usertype|default:1 }}">
+          <div class="form-group">
+            <input type="text" name="username" id="id_username" placeholder="Логин" class="form-control">
+          </div>
+          <div class="form-group add-bottom">
+            <input type="password" name="password" id="id_password" placeholder="Пароль" class="form-control">
+          </div>
+          <div class="submit-row">
+            <input type="submit" value="Войти" class="btn btn-info">
+          </div>
+        </form>
+        <p class="small">Забыли пароль? <br> Вы можете восстановить его <a href="#">здесь</a>.</p>
+        <img src="{% static 'img/sign_girls.png' %}" alt="" class="sign__bg">
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block footer-menu %}
+  {% include 'cabinet/__includes/welcome_menu.html' %}
+{% endblock %}
+{% block bottom %}
+  <div id="confidentiality-block">
+    <h2>Политика конфиденциальности</h2>
+    <p>Мы не собираем личную информацию о Вас, когда Вы заходите на наш сайт.
+    Вы можете анонимно просматривать сайт. Тем не менее, Ваш браузер все же автоматически сообщает нам тип компьютера и операционной системы, которые Вы используете. Единственная личная информация о Вас, которую мы получаем, это те данные, которые Вы добровольно предоставляете при заполнении форм.
+    При заполнении форм на сайте у Вас запросят персональную информацию, такую как имя, номер телефона. Предоставление такой информации в ответ на запрос осуществляется Вами исключительно добровольно.
+    Предоставленная Вами информация используется чтобы оказать те услуги, которые Вы сами запрашиваете.
+    </p>
+  </div>
+{% endblock %}
