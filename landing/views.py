@@ -6,6 +6,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import TemplateView
 from core.models import User
 from landing.models import Setup
+from django.views.decorators.clickjacking import xframe_options_exempt
 
 __author__ = 'alexy'
 
@@ -22,6 +23,7 @@ class LandingView(TemplateView):
         return context
 
 
+@xframe_options_exempt
 def landing_sign(request):
     context = {}
     error = None
