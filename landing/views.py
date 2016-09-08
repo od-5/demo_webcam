@@ -3,6 +3,7 @@ from annoying.functions import get_object_or_None
 from django.contrib.auth import authenticate, login, logout
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseRedirect
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import TemplateView
 from core.models import User
 from landing.models import Setup
@@ -23,6 +24,7 @@ class LandingView(TemplateView):
         return context
 
 
+@csrf_exempt
 @xframe_options_exempt
 def landing_sign(request):
     context = {}
