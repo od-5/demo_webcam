@@ -58,7 +58,7 @@ class MyUserAdmin(UserAdmin):
     fieldsets = (
         (None, {'fields': ('username', 'email', 'password')}),
         (_('Personal info'), {'fields': ('first_name', 'last_name', 'patronymic', 'phone')}),
-        (_('Permissions'), {'fields': ('is_active', 'is_staff')}),
+        (_('Permissions'), {'fields': ('type', 'is_active', 'is_staff')}),
         (_('Important dates'), {'fields': ('last_login', 'date_joined')}),
     )
 
@@ -69,9 +69,9 @@ class MyUserAdmin(UserAdmin):
         }),
     )
     readonly_fields = ('last_login', 'date_joined')
-    list_display = ('username', 'email', 'first_name', 'last_name', 'is_staff', 'is_superuser')
+    list_display = ('username', 'email', 'type', 'first_name', 'last_name', 'is_staff', 'is_superuser')
     search_fields = ('username', 'email', 'first_name', 'last_name', 'email')
-    list_filter = ('is_staff',)
+    list_filter = ('is_staff', 'type')
     ordering = ('username',)
 
 

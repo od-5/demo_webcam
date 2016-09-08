@@ -17,4 +17,5 @@ urlpatterns = patterns(
     url(r'^robots\.txt', 'get_robots_txt', name='robots'),
     url(r'^sitemap\.xml', 'get_sitemap_xml', name='sitemap'),
     url(r'^login/$', 'landing_sign', name='login'),
+    url(r'^logout/$', 'landing_logout', name='logout'),
 )

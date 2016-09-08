@@ -4,7 +4,7 @@ __author__ = 'alexy'
 
 SUIT_CONFIG = {
     # header
-    'ADMIN_NAME': u'CMS',
+    'ADMIN_NAME': u'demo.onlinestripclub.pro',
     'HEADER_DATE_FORMAT': 'l, j. F Y',
     'HEADER_TIME_FORMAT': 'H:i',
 

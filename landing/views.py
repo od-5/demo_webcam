@@ -1,6 +1,6 @@
 # coding=utf-8
 from annoying.functions import get_object_or_None
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import TemplateView
@@ -38,6 +38,12 @@ def landing_sign(request):
                 if user.is_active:
                     login(request, user)
                     return HttpResponseRedirect(request.META['HTTP_REFERER'])
+    return HttpResponseRedirect(reverse('landing:index'))
+
+
+def landing_logout(request):
+    if request.user.is_authenticated():
+        logout(request)
     return HttpResponseRedirect(reverse('landing:index'))
 
 

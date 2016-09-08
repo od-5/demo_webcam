@@ -50,6 +50,7 @@
             </div>
             {% if user.is_authenticated %}
             <a href="{% url 'landing:account' %}" class="header-enter header-person">Евгений</a>
+              <a href="{% url 'landing:logout' %}" class="header-exit header-link">Выход</a>
             {% else %}
             <a href="#enter-popup" class="header-enter blue-fancy">Вход</a>
             {% endif %}
@@ -111,10 +112,12 @@
   </div>
   <div id="enter-popup" class="enter-popup">
     <div class="enter-popup-title">Войдите в ваш аккаунт</div>
+    <p class="test-data">логин: <strong>client</strong></p>
+    <p class="test-data">пароль: <strong>client</strong></p>
     <form action="{% url 'landing:login' %}" method="post">{% csrf_token %}
       <fieldset>
         <input name="username" type="text" class="input input-login" placeholder="Введите ваш логин">
-        <input name="password" type="password" class="input input-email" placeholder="Введите ваш пароль">
+        <input name="password" type="password" class="input input-password" placeholder="Введите ваш пароль">
         <button class="submit">Войти</button>
         <div class="enter-popup-text">У вас еще нет аккуанта? <br><a href="">Зарегистрироваться</a></div>
       </fieldset>
