@@ -1,5 +1,8 @@
 $(document).ready(function(){	
 
+	if (window!=window.top) {
+    $('.come-back').remove();
+  }
 	// fancybox
 	$('.fancybox').fancybox();
 	$('.black-fancy').fancybox({
