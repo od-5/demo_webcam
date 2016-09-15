@@ -1,164 +1,164 @@
 ﻿{% extends 'landing/base_site.html' %}
-{% load staticfiles %}
+{% load static %}
 {% block content %}
-		<section class="main-block">
-			<div class="holder">
-				<div class="main-content">
-					<div class="main-camera">
-						<div class="main-camera-top">
-							<a href="" class="main-camera-link active">
-								<span class="main-camera-link-icon">
-									<img src="{% static 'landing/images/cam-icon.png' %}" alt="">
-								</span>
-								<span class="main-camera-link-text"><span class="mob-hide">Камера </span>1</span>
-							</a>
-							<a href="" class="main-camera-link">
-								<span class="main-camera-link-icon">
-									<img src="{% static 'landing/images/cam-icon.png' %}" alt="">
-								</span>
-								<span class="main-camera-link-text"><span class="mob-hide">Камера </span>2</span>
-							</a>
-							<a href="" class="main-camera-link">
-								<span class="main-camera-link-icon">
-									<img src="{% static 'landing/images/cam-icon.png' %}" alt="">
-								</span>
-								<span class="main-camera-link-text"><span class="mob-hide">Камера </span>3</span>
-							</a>
-						</div>
-						<div class="main-camera-video">
-							<div class="main-camera-age">18+</div>
-							<div class="main-camera-status">
-								<a href="" class="main-camera-online active">On-line</a>
-								<a href="" class="main-camera-record">Запись</a>
-							</div>
-							
-							<!-- картинка для верстки -->
-							<img src="{% static 'landing/images/media/video1.jpg' %}" alt="">
-							<!-- картинка для верстки -->
-							
-						</div>
-					</div>
-				</div>
-				<aside class="main-side">
+    <section class="main-block">
+      <div class="holder">
+        <div class="main-content">
+          <div class="main-camera">
+            <div class="main-camera-top">
+              <a href="" class="main-camera-link active">
+                <span class="main-camera-link-icon">
+                  <img src="{% static 'landing/images/cam-icon.png' %}" alt="">
+                </span>
+                <span class="main-camera-link-text"><span class="mob-hide">Камера </span>1</span>
+              </a>
+              <a href="" class="main-camera-link">
+                <span class="main-camera-link-icon">
+                  <img src="{% static 'landing/images/cam-icon.png' %}" alt="">
+                </span>
+                <span class="main-camera-link-text"><span class="mob-hide">Камера </span>2</span>
+              </a>
+              <a href="" class="main-camera-link">
+                <span class="main-camera-link-icon">
+                  <img src="{% static 'landing/images/cam-icon.png' %}" alt="">
+                </span>
+                <span class="main-camera-link-text"><span class="mob-hide">Камера </span>3</span>
+              </a>
+            </div>
+            <div class="main-camera-video">
+              <div class="main-camera-age">18+</div>
+              <div class="main-camera-status">
+                <a href="" class="main-camera-online active">On-line</a>
+                <a href="" class="main-camera-record">Запись</a>
+              </div>
+
+              <!-- картинка для верстки -->
+              <img src="{% static 'landing/images/media/video1.jpg' %}" alt="">
+              <!-- картинка для верстки -->
+
+            </div>
+          </div>
+        </div>
+        <aside class="main-side">
           {% if user.is_authenticated %}
           <div class="main-chat">
-						<div class="main-chat-content">
-							<div class="main-chat-list">
-								<div class="main-chat-item">
-									<div class="main-chat-name">Александр</div>
-									<div class="main-chat-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-									Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo</div>
-								</div>
-								<div class="main-chat-item model-message">
-									<div class="main-chat-name">Ирина</div>
-									<div class="main-chat-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-								</div>
-								<div class="main-chat-item">
-									<div class="main-chat-name">Александр</div>
-									<div class="main-chat-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
-								</div>
-								<div class="main-chat-item">
-									<div class="main-chat-name">Александр</div>
-									<div class="main-chat-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-									Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo</div>
-								</div>
-								<div class="main-chat-item model-message">
-									<div class="main-chat-name">Ирина</div>
-									<div class="main-chat-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-								</div>
-								<div class="main-chat-item">
-									<div class="main-chat-name">Александр</div>
-									<div class="main-chat-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
-								</div>
-							</div>
-							<div class="main-chat-status">Ирина печатает ...</div>
-						</div>
-						<div class="main-chat-input">
-							<form action="">
-								<fieldset>
-									<input name="" type="text" class="input" placeholder=" Ваше сообщение...">
-									<button class="chat-submit"></button>
-								</fieldset>
-							</form>
-						</div>
-					</div>
+            <div class="main-chat-content">
+              <div class="main-chat-list">
+                <div class="main-chat-item">
+                  <div class="main-chat-name">Александр</div>
+                  <div class="main-chat-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo</div>
+                </div>
+                <div class="main-chat-item model-message">
+                  <div class="main-chat-name">Ирина</div>
+                  <div class="main-chat-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+                <div class="main-chat-item">
+                  <div class="main-chat-name">Александр</div>
+                  <div class="main-chat-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                </div>
+                <div class="main-chat-item">
+                  <div class="main-chat-name">Александр</div>
+                  <div class="main-chat-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo</div>
+                </div>
+                <div class="main-chat-item model-message">
+                  <div class="main-chat-name">Ирина</div>
+                  <div class="main-chat-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+                <div class="main-chat-item">
+                  <div class="main-chat-name">Александр</div>
+                  <div class="main-chat-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                </div>
+              </div>
+              <div class="main-chat-status">Ирина печатает ...</div>
+            </div>
+            <div class="main-chat-input">
+              <form action="">
+                <fieldset>
+                  <input name="" type="text" class="input" placeholder=" Ваше сообщение...">
+                  <button class="chat-submit"></button>
+                </fieldset>
+              </form>
+            </div>
+          </div>
           {% else %}
-					<div class="main-side-block">
-						<div class="main-form-title">
-							<span class="main-form-title1">Создайте </span>
-							<span class="main-form-title2">БЕСПЛАТНЫЙ</span>
-							аккаунт и получите
-						</div>
-						<ul class="main-form-list">
-							<li>Неограниченный просмотр главной сцены;</li>
-							<li>Доступ к чату для общения;</li>
-							<li>Доступ к закулисным камерам;</li>
-						</ul>
-						<div class="main-form">
-							<form action="">
-								<fieldset>
-									<input name="" type="text" class="input input-login" placeholder="Введите ваш логин">
-									<input name="" type="text" class="input input-email" placeholder="Введите ваш email">
-									<button class="submit">Создать аккаунт</button>
-									<div class="check-block">
-										<input name="" id="check1" type="checkbox" class="check" checked>
-										<label for="check1" class="check-label">Я соглашаюсь с <a href="">правилами сайта</a></label>
-									</div>
-								</fieldset>
-							</form>
-						</div>
-					</div>
-					<a href="#popup5" class="submit black-fancy">Создать аккаунт</a>
+          <div class="main-side-block">
+            <div class="main-form-title">
+              <span class="main-form-title1">Создайте </span>
+              <span class="main-form-title2">БЕСПЛАТНЫЙ</span>
+              аккаунт и получите
+            </div>
+            <ul class="main-form-list">
+              <li>Неограниченный просмотр главной сцены;</li>
+              <li>Доступ к чату для общения;</li>
+              <li>Доступ к закулисным камерам;</li>
+            </ul>
+            <div class="main-form">
+              <form action="">
+                <fieldset>
+                  <input name="" type="text" class="input input-login" placeholder="Введите ваш логин">
+                  <input name="" type="text" class="input input-email" placeholder="Введите ваш email">
+                  <button class="submit">Создать аккаунт</button>
+                  <div class="check-block">
+                    <input name="" id="check1" type="checkbox" class="check" checked>
+                    <label for="check1" class="check-label">Я соглашаюсь с <a href="">правилами сайта</a></label>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+          <a href="#popup5" class="submit black-fancy">Создать аккаунт</a>
           {% endif %}
-				</aside>
-			</div>
-		</section>
-		<section class="camera-block">
-			<div class="holder">
-				<div class="camera-holder">
-					<div class="camera-item">
-						<div class="camera-item-video">
-							<div class="main-camera-age">18+</div>
-							<a href="" class="camera-overlay">
-								<span class="camera-overlay-icon"></span>
-							</a>
-							
-							<!-- картинка для верстки -->
-							<img src="{% static 'landing/images/media/c1.jpg' %}" alt="">
-							<!-- картинка для верстки -->
-							
-						</div>
-						<div class="camera-item-name">Камера 1</div>
-					</div>
-					<div class="camera-item">
-						<div class="camera-item-video">
-							<div class="main-camera-age">18+</div>
-							<a href="" class="camera-overlay locked">
-								<span class="camera-overlay-icon"></span>
-							</a>
-							
-							<!-- картинка для верстки -->
-							<img src="{% static 'landing/images/media/c2.jpg' %}" alt="">
-							<!-- картинка для верстки -->
-							
-						</div>
-						<div class="camera-item-name">Камера 2</div>
-					</div>
-					<div class="camera-item">
-						<div class="camera-item-video">
-							<div class="main-camera-age">18+</div>
-							<a href="" class="camera-overlay locked">
-								<span class="camera-overlay-icon"></span>
-							</a>
-							
-							<!-- картинка для верстки -->
-							<img src="{% static 'landing/images/media/c3.jpg' %}" alt="">
-							<!-- картинка для верстки -->
-							
-						</div>
-						<div class="camera-item-name">Камера 3</div>
-					</div>
-				</div>
-			</div>
-		</section>
+        </aside>
+      </div>
+    </section>
+    <section class="camera-block">
+      <div class="holder">
+        <div class="camera-holder">
+          <div class="camera-item">
+            <div class="camera-item-video">
+              <div class="main-camera-age">18+</div>
+              <a href="" class="camera-overlay">
+                <span class="camera-overlay-icon"></span>
+              </a>
+
+              <!-- картинка для верстки -->
+              <img src="{% static 'landing/images/media/c1.jpg' %}" alt="">
+              <!-- картинка для верстки -->
+
+            </div>
+            <div class="camera-item-name">Камера 1</div>
+          </div>
+          <div class="camera-item">
+            <div class="camera-item-video">
+              <div class="main-camera-age">18+</div>
+              <a href="" class="camera-overlay locked">
+                <span class="camera-overlay-icon"></span>
+              </a>
+
+              <!-- картинка для верстки -->
+              <img src="{% static 'landing/images/media/c2.jpg' %}" alt="">
+              <!-- картинка для верстки -->
+
+            </div>
+            <div class="camera-item-name">Камера 2</div>
+          </div>
+          <div class="camera-item">
+            <div class="camera-item-video">
+              <div class="main-camera-age">18+</div>
+              <a href="" class="camera-overlay locked">
+                <span class="camera-overlay-icon"></span>
+              </a>
+
+              <!-- картинка для верстки -->
+              <img src="{% static 'landing/images/media/c3.jpg' %}" alt="">
+              <!-- картинка для верстки -->
+
+            </div>
+            <div class="camera-item-name">Камера 3</div>
+          </div>
+        </div>
+      </div>
+    </section>
 {% endblock %}

@@ -1,13 +1,13 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-  {% load staticfiles %}
   <meta charset="utf-8">
   <meta name="format-detection" content="telephone=no">
   <meta name="keywords" content="{% block meta_keys %}{% endblock %}">
   <meta name="description" content="{% block meta_desc %}{% endblock %}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}OnlineStipClub.pro - смотрите жизнь за кулисами{% endblock %}</title>
+  {% load staticfiles %}
   <link media="all" rel="stylesheet" type="text/css" href="{% static 'landing/css/all.css' %}" />
   <link media="all" rel="stylesheet" type="text/css" href="{% static 'landing/css/jquery.fancybox.css' %}" />
   <link media="all" rel="stylesheet" type="text/css" href="{% static 'landing/css/jquery.bxslider.css' %}" />
@@ -29,8 +29,28 @@
   <!--[if lt IE 9]><script type="text/javascript" src="{% static 'landing/js/placeholder.js' %}"></script><![endif]-->
 </head>
 <body>
+<style>
+  .come-back {
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: #333;
+      top: 0;
+      font-size: 24px;
+  }
+  .come-back__link {
+    color: #fff;
+    font-size: 24px;
+  }
+</style>
+  <div class="come-back">
+    <a href="http://onlinestripclub.pro/site/" class="come-back__link">Вернуться на сайт OnlineStripClub.pro</a>
+  </div>
   <div id="wrapper">
     <header id="header">
+
       <div class="header-top">
         <div class="holder">
           <div class="logo">
