@@ -1332,6 +1332,13 @@ a.submit {
 /************************* media *************************/
 @media screen and (max-width: 1023px) {
     .header-top {padding: 47px 0 50px;}
+    .header-exit {
+        padding-top: 10px;
+        padding-left: 0;
+    }
+    .header-exit:before {
+        display: none;
+    }
     .logo-img {
         width: 56px;
         margin: 0 -5px 0 0;
