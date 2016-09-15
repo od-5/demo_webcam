@@ -261,6 +261,21 @@ a.submit {
     min-height: 100%;
     padding: 0 0 134px;
 }
+.come-back {
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: #333;
+      top: 0;
+      font-size: 24px;
+      z-index: 2;
+  }
+  .come-back__link {
+    color: #fff;
+    font-size: 24px;
+  }
 /************************* header *************************/
 /************************* header top *************************/
 .header-top {
@@ -1474,6 +1489,9 @@ a.submit {
     }
 }
 @media screen and (max-width: 767px) {
+    .come-back__link {
+        font-size: 14px;
+    }
     #wrapper {
         min-height: 1px;
         padding: 0;
