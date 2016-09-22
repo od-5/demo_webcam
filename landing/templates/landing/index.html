@@ -41,7 +41,7 @@
                 <a href="" class="main-camera-online active">On-line</a>
                 <a href="" class="main-camera-record">Запись</a>
               </div>
-              <video controls loop="loop">
+              <video controls>
                 <source src="{% static 'landing/video/video.mov' %}" type="video/mp4">
                 <source src="movie.ogg" type="video/ogg">
                 <img src="{% static 'landing/images/media/video1.jpg' %}" alt="">
@@ -180,7 +180,7 @@
   </div>
 </div>
 <div id="popup4" class="black-popup">
-  <form action="" class="popup-pay">
+  <form class="popup-pay">
     <fieldset>
       <div class="black-popup-title white">1. Выберите способ оплаты</div>
       <div class="pay-choice">

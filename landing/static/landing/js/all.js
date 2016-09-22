@@ -15,14 +15,15 @@ $(document).ready(function(){
 				wrap     : '<div class="fancybox-wrap fancybox-black" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>'
 			},
 		afterClose: function(){
-			setTimeout('location.replace("/pleaseregister/")', 13000);
+			setTimeout('location.replace("/pleaseregister/")', 10000);
 		}
 	});
 	$('.blue-button').click(function(){
 		$.fancybox.close();
 	});
 	$(".child_filter").trigger('click');
-	$(".renew-filter").trigger('click');
+	setTimeout('$(".renew-filter").trigger("click")', 10000);
+
 	$('.close-fancybox').click(function () {
 		$.fancybox.close();
 	});
