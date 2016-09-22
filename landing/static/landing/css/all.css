@@ -486,7 +486,8 @@ a.submit {
     border-right: 5px solid transparent;
 }
 .main-camera-link-icon img {
-    vertical-align: middle;
+    /*vertical-align: middle;*/
+    margin-top: 10px;
 }
 .main-camera-link-text {
     display: block;
@@ -496,6 +497,7 @@ a.submit {
     margin: 0 0 0 50px;
 }
 .main-camera-video img {width: 100%;}
+.main-camera-video video {width: 100%;}
 .main-camera-age {
     position: absolute;
     top: 25px;

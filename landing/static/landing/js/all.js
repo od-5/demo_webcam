@@ -10,6 +10,22 @@ $(document).ready(function(){
 				wrap     : '<div class="fancybox-wrap fancybox-black" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>'
 			},
 	});
+	$('.black-fancy-child').fancybox({
+		tpl: {
+				wrap     : '<div class="fancybox-wrap fancybox-black" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>'
+			},
+		afterClose: function(){
+			setTimeout('location.replace("/pleaseregister/")', 13000);
+		}
+	});
+	$('.blue-button').click(function(){
+		$.fancybox.close();
+	});
+	$(".child_filter").trigger('click');
+	$(".renew-filter").trigger('click');
+	$('.close-fancybox').click(function () {
+		$.fancybox.close();
+	});
 	$('.blue-fancy').fancybox({
 		afterLoad: function () {
 			$(".fancybox-overlay").addClass("fancybox-blue");

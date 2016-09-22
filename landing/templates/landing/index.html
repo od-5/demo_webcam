@@ -1,5 +1,15 @@
 ﻿{% extends 'landing/base_site.html' %}
 {% load static %}
+{% block top_js %}
+  {% if user.is_authenticated %}
+  {% else %}
+    <script type="text/javascript">
+
+{#      var redirectUrl = {% url 'landing:pleaseregister' %};#}
+{#		  setTimeout('location.replace(redirectUrl)', 30000);#}
+	  </script>
+  {% endif %}
+{% endblock %}
 {% block content %}
     <section class="main-block">
       <div class="holder">
@@ -31,11 +41,11 @@
                 <a href="" class="main-camera-online active">On-line</a>
                 <a href="" class="main-camera-record">Запись</a>
               </div>
-
-              <!-- картинка для верстки -->
-              <img src="{% static 'landing/images/media/video1.jpg' %}" alt="">
-              <!-- картинка для верстки -->
-
+              <video controls loop="loop">
+                <source src="{% static 'landing/video/video.mov' %}" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                <img src="{% static 'landing/images/media/video1.jpg' %}" alt="">
+              </video>
             </div>
           </div>
         </div>
@@ -161,4 +171,72 @@
         </div>
       </div>
     </section>
+{% if user.is_authenticated %}
+<a href="#popup2" class="button black-fancy renew-filter" style="display: none;">Продлить подписку</a>
+<div id="popup2" class="black-popup">
+  <div class="black-popup-title white">Нажмите на кнопку,<br> чтобы продлить вашу подписку</div>
+  <div class="black-popup-buttons">
+    <a href="#popup4" class="green-button black-fancy close-fancybox">Продлить подписку</a>
+  </div>
+</div>
+<div id="popup4" class="black-popup">
+  <form action="" class="popup-pay">
+    <fieldset>
+      <div class="black-popup-title white">1. Выберите способ оплаты</div>
+      <div class="pay-choice">
+        <label class="pay-item active" for="pay_r1">
+          <input type="radio" class="pay-radio" name="pay-choice" id="pay_r1" checked>
+          <img src="{% static 'landing/images/media/pay1.png' %}" alt="">
+        </label>
+        <label class="pay-item" for="pay_r2">
+          <input type="radio" class="pay-radio" name="pay-choice" id="pay_r2">
+          <img src="{% static 'landing/images/media/pay2.png' %}" alt="">
+        </label>
+        <label class="pay-item" for="pay_r3">
+          <input type="radio" class="pay-radio" name="pay-choice" id="pay_r3">
+          <img src="{% static 'landing/images/media/pay3.png' %}" alt="">
+        </label>
+        <label class="pay-item" for="pay_r4">
+          <input type="radio" class="pay-radio" name="pay-choice" id="pay_r4">
+          <img src="{% static 'landing/images/media/pay4.png' %}" alt="">
+        </label>
+      </div>
+      <div class="black-popup-title white">2. Выберите пакет подписки</div>
+      <div class="pay-package">
+        <div class="pay-package-item">
+          <input type="radio" class="radio" name="pay-package" id="pack_r1" checked>
+          <label class="package-label" for="pack_r1">Lite пакет на 1 месяц за 1000 руб.</label>
+        </div>
+        <div class="pay-package-item">
+          <input type="radio" class="radio" name="pay-package" id="pack_r2">
+          <label class="package-label" for="pack_r2">Стандартный пакет на 3 месяца за 3000 руб.</label>
+        </div>
+        <div class="pay-package-item">
+          <input type="radio" class="radio" name="pay-package" id="pack_r3">
+          <label class="package-label" for="pack_r3">VIP пакет на 6 месяцев за 6000 руб.</label>
+        </div>
+      </div>
+      <div class="pay-coupon">
+        <div class="pay-coupon-text">Если у вас есть купон, введи его код тут:</div>
+        <div class="pay-coupon-input">
+          <input name="" type="text" class="input" placeholder="Введите ваш логин">
+        </div>
+      </div>
+      <div class="black-popup-buttons">
+        <button class="green-button close-fancybox">Оплатить сейчас</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
+{% else %}
+  <a href="#popup1" class="button black-fancy-child child_filter" style="display: none;">Фильтр от детей</a>
+  <div id="popup1" class="black-popup">
+		<div class="black-popup-title">Вам уже исполнилось 18 лет?</div>
+		<div class="black-popup-text black-popup-text-min">Этот сайт предназначен  для возрастной категории 18+</div>
+		<div class="black-popup-buttons">
+			<a href="#" class="blue-button">да</a>
+			<a href="" class="red-button">нет</a>
+		</div>
+	</div>
+{% endif %}
 {% endblock %}

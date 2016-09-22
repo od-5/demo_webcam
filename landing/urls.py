@@ -10,6 +10,7 @@ __author__ = 'alexy'
 urlpatterns = patterns(
     'landing.views',
     url(r'^$', xframe_options_exempt(TemplateView.as_view(template_name='landing/index.html')), name='index'),
+    url(r'^pleaseregister/$', TemplateView.as_view(template_name='landing/pleaseregister.html'), name='pleaseregister'),
     url(r'^afisha/$', TemplateView.as_view(template_name='landing/afisha.html'), name='afisha'),
     url(r'^account/$', TemplateView.as_view(template_name='landing/account.html'), name='account'),
     url(r'^gallery/$', TemplateView.as_view(template_name='landing/gallery.html'), name='gallery'),
