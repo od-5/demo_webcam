@@ -1,5 +1,14 @@
 ﻿{% extends 'landing/base_site.html' %}
 {% load static %}
+{% block top_js %}
+  {% if user.is_authenticated %}
+    <script type="text/javascript">
+
+{#      var redirectUrl = {% url 'landing:pleaseregister' %};#}
+		  location.replace("/");
+	  </script>
+  {% endif %}
+{% endblock %}
 {% block content %}
 		<section class="main-block">
 			<div class="holder">

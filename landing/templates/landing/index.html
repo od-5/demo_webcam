@@ -41,9 +41,8 @@
                 <a href="" class="main-camera-online active">On-line</a>
                 <a href="" class="main-camera-record">Запись</a>
               </div>
-              <video controls>
+              <video controls id="videoPlayer" {% if user.is_authenticated %}autoplay{% endif %}>
                 <source src="{% static 'landing/video/video.mov' %}" type="video/mp4">
-                <source src="movie.ogg" type="video/ogg">
                 <img src="{% static 'landing/images/media/video1.jpg' %}" alt="">
               </video>
             </div>
@@ -223,7 +222,7 @@
         </div>
       </div>
       <div class="black-popup-buttons">
-        <button class="green-button close-fancybox">Оплатить сейчас</button>
+        <button type="reset" class="green-button close-fancybox">Оплатить сейчас</button>
       </div>
     </fieldset>
   </form>

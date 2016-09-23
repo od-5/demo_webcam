@@ -10,19 +10,24 @@ $(document).ready(function(){
 				wrap     : '<div class="fancybox-wrap fancybox-black" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>'
 			},
 	});
+	var video;
+
+	// фильтр от детей
 	$('.black-fancy-child').fancybox({
 		tpl: {
 				wrap     : '<div class="fancybox-wrap fancybox-black" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>'
 			},
 		afterClose: function(){
-			setTimeout('location.replace("/pleaseregister/")', 10000);
+			video = document.getElementById("videoPlayer");
+			video.play();
+			setTimeout('location.replace("/pleaseregister/")', 13000);
 		}
 	});
 	$('.blue-button').click(function(){
 		$.fancybox.close();
 	});
 	$(".child_filter").trigger('click');
-	setTimeout('$(".renew-filter").trigger("click")', 10000);
+	setTimeout('$(".renew-filter").trigger("click")', 13000);
 
 	$('.close-fancybox').click(function () {
 		$.fancybox.close();
