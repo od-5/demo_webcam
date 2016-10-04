@@ -124,6 +124,11 @@
     padding-bottom: 125px;
   }
 }
+@media (max-width: 480px) {
+  .header-top {
+    height: auto;
+  }
+}
 @media (max-width: 992px) {
   .header-top-menu {
     padding-left: 0;
@@ -139,5 +144,10 @@
 @media (max-width: 860px) {
   .header-top-menu__item {
     padding-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .header-top-menu__item {
+    display: block;
   }
 }
