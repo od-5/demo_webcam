@@ -15,8 +15,8 @@ MIDDLEWARE_CLASSES = (
     # 'apps.mobile.middleware.MobileRedirectMiddleware',
 )
 
-# if settings.DEBUG:
-#     MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
+if settings.DEBUG:
+    MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
 
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',

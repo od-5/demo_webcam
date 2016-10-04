@@ -7,10 +7,13 @@
   padding: 42px;
   position: relative;
 }
+.sign-wrapper {
+  max-width: 372px;
+}
 .sign__bg {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -10px;
 }
 .sign-form {
   width: 374px;

@@ -8918,8 +8918,7 @@ Copyright (c) 2015 Daniel Eden
 }
 html,
 body {
-  min-height: 100%;
-  height: auto;
+  height: 100%;
 }
 html {
   position: relative;
@@ -8927,9 +8926,20 @@ html {
 body {
   background-color: #eff4f9;
 }
+#wrapper {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 60px;
+}
 h1 {
   padding: 40px 0;
   font-size: 30px;
+}
+@media (max-width: 800px) {
+  h1 {
+    padding: 20px 0;
+    text-align: center;
+  }
 }
 h2 {
   padding: 30px 0;
@@ -8953,8 +8963,8 @@ h2 {
 .navbar-brand {
   float: left;
   padding: 0;
-  line-height: 85px;
-  height: 85px;
+  line-height: 78px;
+  height: 78px;
 }
 .navbar-nav li a {
   font-size: 16px;
@@ -9008,11 +9018,12 @@ h2 {
 }
 .main {
   padding-top: 20px;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
 }
 @media (max-width: 767px) {
   .main {
     padding-bottom: 20px;
+    padding-top: 0;
   }
 }
 .main-content {
@@ -9043,10 +9054,9 @@ h2 {
   margin-bottom: 10px;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 60px;
+  margin-top: -60px;
   line-height: 60px;
   background-color: #dfe8f0;
   font-size: 14px;
@@ -9161,10 +9171,13 @@ h2 {
   padding: 42px;
   position: relative;
 }
+.sign-wrapper {
+  max-width: 372px;
+}
 .sign__bg {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -10px;
 }
 .sign-form {
   width: 374px;
@@ -9184,4 +9197,147 @@ h2 {
   font-size: 16px;
   padding: 0;
   border: 0;
+}
+@media (max-width: 860px) {
+  .come-back__link {
+    font-size: 16px;
+  }
+}
+@media (max-width: 992px) {
+  .navbar-header {
+    text-align: center;
+    padding: 26px 0 16px;
+    float: none;
+  }
+}
+@media (max-width: 992px) {
+  .navbar-brand {
+    float: none;
+    display: block;
+    line-height: 36px;
+    height: 36px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-brand img {
+    height: 36px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .navbar-brand img {
+    height: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .welcome-menu {
+    float: right;
+  }
+}
+@media (max-width: 992px) {
+  .welcome-menu {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (max-width: 992px) {
+  .welcome-menu-item {
+    text-align: center;
+    float: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .welcome-menu-item__link {
+    padding: 5px;
+  }
+}
+@media (max-width: 992px) {
+  .welcome-menu-item__link {
+    padding: 0 0 10px 0 !important;
+    font-size: 16px !important;
+    line-height: 19px !important;
+  }
+}
+@media (max-width: 860px) {
+  .sign {
+    padding: 15px;
+  }
+}
+@media (max-width: 800px) {
+  .sign-wrapper {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 860px) {
+  .sign table {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .sign__bg {
+    width: 350px;
+  }
+}
+@media (max-width: 800px) {
+  .sign__bg {
+    display: none;
+  }
+}
+@media (max-width: 860px) {
+  .sign-form {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .footer {
+    height: 125px;
+    padding-top: 20px;
+    margin-top: -125px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 992px) {
+  .footer ul {
+    text-align: center;
+    float: none;
+  }
+}
+@media (max-width: 992px) {
+  .footer ul li {
+    display: block;
+    padding: 0;
+    line-height: inherit;
+  }
+}
+@media (max-width: 992px) {
+  .footer ul li a {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 992px) {
+  .copyright {
+    text-align: center;
+  }
+}
+@media (max-width: 860px) {
+  #wrapper {
+    padding-bottom: 125px;
+  }
+}
+@media (max-width: 992px) {
+  .header-top-menu {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 992px) {
+  .header-top-menu__item {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 860px) {
+  .header-top-menu__item {
+    padding-left: 0;
+  }
 }

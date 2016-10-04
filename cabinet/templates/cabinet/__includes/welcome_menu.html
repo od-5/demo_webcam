@@ -1,11 +1,11 @@
-<ul class="{{ class|default:'' }}">
-  <li {% if usertype == 1 %}class="active"{% endif %}>
-    <a href="{% url 'cabinet:welcome' %}?usertype=1">Вход для администратора</a>
+<ul class="welcome-menu {{ class|default:'' }}">
+  <li class="welcome-menu-item{% if usertype == 1 %} active{% endif %}">
+    <a href="{% url 'cabinet:welcome' %}?usertype=1" class="welcome-menu-item__link">Вход для администратора</a>
   </li>
-  <li {% if usertype == 2 %}class="active"{% endif %}>
-    <a href="{% url 'cabinet:welcome' %}?usertype=2">Вход для вебмастера</a>
+  <li class="welcome-menu-item{% if usertype == 2 %} active{% endif %}">
+    <a href="{% url 'cabinet:welcome' %}?usertype=2" class="welcome-menu-item__link">Вход для вебмастера</a>
   </li>
-  <li {% if usertype == 3 %}class="active"{% endif %}>
-    <a href="{% url 'cabinet:welcome' %}?usertype=3">Вход для сео специалиста</a>
+  <li class="welcome-menu-item{% if usertype == 3 %} active{% endif %}">
+    <a href="{% url 'cabinet:welcome' %}?usertype=3" class="welcome-menu-item__link">Вход для сео специалиста</a>
   </li>
 </ul>

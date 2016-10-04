@@ -1,16 +1,21 @@
 {% extends 'cabinet/cabinet_base.html' %}
+{% load staticfiles %}
+{% block viewport %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock %}
 {% block title %}Выберите тип пользователя для входа{% endblock %}
 {% block header_menu %}
-  {% load staticfiles %}
   <nav class="navbar navbar-inverse">
     <div class="container">
-      <div class="col-lg-12">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="http://onlinestripclub.pro/">
-            <img src="{% static 'img/logotype.png' %}" alt="onlinestripclub.pro">
-          </a>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="http://onlinestripclub.pro/">
+              <img src="{% static 'img/logotype.png' %}" alt="onlinestripclub.pro">
+            </a>
+          </div>
+        {% include 'cabinet/__includes/welcome_menu.html' with class="nav navbar-nav" %}
         </div>
-      {% include 'cabinet/__includes/welcome_menu.html' with class="nav navbar-nav navbar-right" %}
       </div>
     </div>
   </nav>
@@ -28,64 +33,66 @@
       </h1>
     </div>
     <div class="col-lg-12">
-
       <div class="sign">
-        {% if usertype == 1 %}
-        <table>
-          <tbody>
-            <tr>
-              <td>Логин:&nbsp;&nbsp;</td>
-              <td>admin</td>
-            </tr>
-            <tr>
-              <td>Пароль:&nbsp;&nbsp;</td>
-              <td>admin</td>
-            </tr>
-          </tbody>
-        </table>
-        {% elif usertype == 2 %}
-        <table>
-          <tbody>
-            <tr>
-              <td>Логин:&nbsp;&nbsp;</td>
-              <td>webmaster</td>
-            </tr>
-            <tr>
-              <td>Пароль:&nbsp;&nbsp;</td>
-              <td>webmaster</td>
-            </tr>
-          </tbody>
-        </table>
-        {% elif usertype == 3 %}
-        <table>
-          <tbody>
-            <tr>
-              <td>Логин:&nbsp;&nbsp;</td>
-              <td>testing</td>
-            </tr>
-            <tr>
-              <td>Пароль:&nbsp;&nbsp;</td>
-              <td>testing</td>
-            </tr>
-          </tbody>
-        </table>
-        {% endif %}
-        <form action="" role="form" method="post" class="sign-form">{% csrf_token %}
-          <input type="hidden" name="usertype" value="{{ usertype|default:1 }}">
-          <div class="form-group">
-            <input type="text" name="username" id="id_username" placeholder="Логин" class="form-control">
-          </div>
-          <div class="form-group add-bottom">
-            <input type="password" name="password" id="id_password" placeholder="Пароль" class="form-control">
-          </div>
-          <div class="submit-row">
-            <input type="submit" value="Войти" class="btn btn-info">
-          </div>
-        </form>
-        <p class="small">Забыли пароль? <br> Вы можете восстановить его <a href="#">здесь</a>.</p>
-        <img src="{% static 'img/sign_girls.png' %}" alt="" class="sign__bg">
+        <div class="sign-wrapper">
+          {% if usertype == 1 %}
+          <table>
+            <tbody>
+              <tr>
+                <td>Логин:&nbsp;&nbsp;</td>
+                <td>admin</td>
+              </tr>
+              <tr>
+                <td>Пароль:&nbsp;&nbsp;</td>
+                <td>admin</td>
+              </tr>
+            </tbody>
+          </table>
+          {% elif usertype == 2 %}
+          <table>
+            <tbody>
+              <tr>
+                <td>Логин:&nbsp;&nbsp;</td>
+                <td>webmaster</td>
+              </tr>
+              <tr>
+                <td>Пароль:&nbsp;&nbsp;</td>
+                <td>webmaster</td>
+              </tr>
+            </tbody>
+          </table>
+          {% elif usertype == 3 %}
+          <table>
+            <tbody>
+              <tr>
+                <td>Логин:&nbsp;&nbsp;</td>
+                <td>testing</td>
+              </tr>
+              <tr>
+                <td>Пароль:&nbsp;&nbsp;</td>
+                <td>testing</td>
+              </tr>
+            </tbody>
+          </table>
+          {% endif %}
+          <form action="" role="form" method="post" class="sign-form">{% csrf_token %}
+            <input type="hidden" name="usertype" value="{{ usertype|default:1 }}">
+            <div class="form-group">
+              <input type="text" name="username" id="id_username" placeholder="Логин" class="form-control">
+            </div>
+            <div class="form-group add-bottom">
+              <input type="password" name="password" id="id_password" placeholder="Пароль" class="form-control">
+            </div>
+            <div class="submit-row">
+              <input type="submit" value="Войти" class="btn btn-info">
+            </div>
+          </form>
+          <p class="small">Забыли пароль? <br> Вы можете восстановить его <a href="#">здесь</a>.</p>
+          <img src="{% static 'img/sign_girls.png' %}" alt="" class="sign__bg">
+        </div>
       </div>
     </div>
+    <div class="clearfix"></div>
   </div>
 {% endblock %}
 {% block footer-menu %}
